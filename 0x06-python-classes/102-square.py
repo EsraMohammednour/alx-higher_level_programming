@@ -1,47 +1,27 @@
 #!/usr/bin/python3
-class Square:
-    def __eq__(self, other):
-        return self.__size == other.__size
+"""Define a MagicClass matching exactly a bytecode provided by Holberton."""
 
-    def __lt__(self, other):
-        return self.__size < other.__size
+import math
 
-    def __le__(self, other):
-        return self.__size <= other.__size
 
-    def __ne__(self, other):
-        return self.__size != other.__size
+class MagicClass:
+    """Represent a circle."""
 
-    def __gt__(self, other):
-        return self.__size > other.__size
+    def __init__(self, radius=0):
+        """Initialize a MagicClass.
 
-    def __ge__(self, other):
-        return self.__size >= other.__size
-
-    def __init__(self, size=0):
-        """Method to initialize the square object"""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        Arg:
+            radius (float or int): The radius of the new MagicClass.
+        """
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError("radius must be a number")
+        self.__radius = radius
 
     def area(self):
-        """Method that returns the square are of the object"""
-        return self.__size**2
+        """Return the area of the MagicClass."""
+        return (self.__radius ** 2 * math.pi)
 
-    @property
-    def size(self):
-        """Method to returns the size value"""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Method to set the size value of the square object"""
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+    def circumference(self):
+        """Return The circumference of the MagicClass."""
+        return (2 * math.pi * self.__radius)
