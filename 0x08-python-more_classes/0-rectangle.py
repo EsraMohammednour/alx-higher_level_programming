@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Define a Ractangle class.
-"""
+"""Define a Ractangle class."""
 
 
 class Rectangle:
