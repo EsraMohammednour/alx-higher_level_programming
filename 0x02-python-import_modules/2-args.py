@@ -3,9 +3,9 @@ if __name__ == "__main__":
     import sys
     x = len(sys.argv) - 1
     if x == 0:
-        print("0 arguments.")
+        print(f"{x} arguments.")
     elif x == 1:
-        print("1 argument:")
+        print(f"{} argument:")
     else:
         print("{} argument:".format(x))
     for i in range(x):
