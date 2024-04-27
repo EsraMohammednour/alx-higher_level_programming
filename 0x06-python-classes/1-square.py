@@ -10,10 +10,4 @@ class Square:
         __size: square size
     """
 
-    def __init__(self, size):
-        """initialize class instance
-
-        Args:
-            size: set the size attribute
-        """
-        self.__size = size
+    __size = None
