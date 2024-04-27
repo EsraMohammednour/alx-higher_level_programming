@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''mode the defining square class
+'''
 
 
 class Square:
