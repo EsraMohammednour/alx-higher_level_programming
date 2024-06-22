@@ -4,10 +4,10 @@ if __name__ == "__main__":
     import mySQLdb
     import sys
 
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sysargv[3])
-    c = db.cursor()
+    d = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = d.cursor()
     c.execute("SELECT * FROM states ORDER BY id ASC")
     for row in c.fetchall():
         print(row)
     c.close()
-    db.close()
+    d.close()
