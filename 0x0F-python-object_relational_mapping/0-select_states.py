@@ -4,9 +4,7 @@ if __name__ == "__main__":
     import mySQLdb
     import sys
 
-    d = MySQLdb.connect(host='localhost',
-                        port=3306,
-                        user=sys.argv[1],
+    d = MySQLdb.connect(user=sys.argv[1],
                         passwd=sys.argv[2],
                         db=sys.argv[3])
     c = d.cursor()
