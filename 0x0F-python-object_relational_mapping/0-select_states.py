@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-''' script that lists all states from the database hbtn_0e_0_usa'''
+'''script that lists all states from the database hbtn_0e_0_usa'''
 if __name__ == "__main__":
     import mySQLdb
     import sys
 
-    db = MySQLdb.connect(user=sys.argv[1],
-                            passwd=sys.argv[2],
-                            db=sysargv[3])
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sysargv[3])
     c = db.cursor()
-    c.execute("SELECT * FROM states ORDER by id ASC")
+    c.execute("SELECT * FROM states ORDER BY id ASC")
     for row in c.fetchall():
         print(row)
     c.close()
