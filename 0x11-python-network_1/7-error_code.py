@@ -8,4 +8,5 @@ if __name__ == "__main__":
     a = requests.get(url)
     if (a < 400):
         print(a.text)
-    print('Error code:', a.status_code)
+    else:
+        print('Error code:', a.status_code)
