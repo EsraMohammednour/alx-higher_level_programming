@@ -9,4 +9,4 @@ if __name__ == "__main__":
     if (a < 400):
         print(a.text)
     else:
-        print('Error code:', a.status_code)
+        print("Error code: {}".format(a.status_code))
