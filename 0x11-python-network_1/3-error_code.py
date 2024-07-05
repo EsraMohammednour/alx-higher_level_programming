@@ -6,9 +6,8 @@ from urllib.error import HTTPError
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    r = Request(url)
     try:
-        with urlopen(r) as a:
-            print(dict(a.read().decode('utf-8'))
+        with urlopen(url) as a:
+            print(a.read().decode('utf-8'))
     except HTTPError as e:
         print("Error code: ",e.code)
